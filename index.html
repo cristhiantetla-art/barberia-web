@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería El Estilo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; color: #222; }
+
+        /* NAV */
+        nav {
+            background: #111;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav h1 { color: #C9A84C; font-size: 22px; letter-spacing: 2px; }
+        nav ul { list-style: none; display: flex; gap: 28px; }
+        nav ul li a { color: #fff; text-decoration: none; font-size: 14px; letter-spacing: 1px; }
+        nav ul li a:hover { color: #C9A84C; }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1400') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h2 { font-size: 52px; letter-spacing: 4px; margin-bottom: 16px; }
+        .hero p { font-size: 18px; color: #C9A84C; margin-bottom: 32px; }
+        .btn {
+            background: #C9A84C;
+            color: #111;
+            padding: 14px 36px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-radius: 2px;
+            text-decoration: none;
+        }
+        .btn:hover { background: #a8882e; }
+
+        /* SERVICIOS */
+        .servicios {
+            padding: 80px 40px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+        .servicios h2 { font-size: 32px; margin-bottom: 8px; }
+        .linea { width: 60px; height: 3px; background: #C9A84C; margin: 0 auto 40px; }
+        .cards { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+        .card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 32px 24px;
+            width: 200px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .card .icono { font-size: 36px; margin-bottom: 12px; }
+        .card h3 { font-size: 16px; margin-bottom: 8px; }
+        .card p { font-size: 13px; color: #666; }
+        .card .precio { font-size: 20px; color: #C9A84C; font-weight: bold; margin-top: 12px; }
+
+        /* CONTACTO */
+        .contacto {
+            padding: 80px 40px;
+            text-align: center;
+            background: #111;
+            color: white;
+        }
+        .contacto h2 { font-size: 32px; margin-bottom: 8px; }
+        .contacto form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 480px;
+            margin: 40px auto 0;
+        }
+        .contacto input,
+        .contacto textarea {
+            padding: 14px;
+            border: 1px solid #444;
+            background: #222;
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .contacto textarea { height: 120px; resize: none; }
+        .contacto button {
+            background: #C9A84C;
+            color: #111;
+            border: none;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            color: #666;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>✂ EL ESTILO</h1>
+    <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>BARBERÍA<br>EL ESTILO</h2>
+    <p>Cortes clásicos y modernos para el hombre de hoy</p>
+    <a href="#contacto" class="btn">RESERVAR CITA</a>
+</section>
+
+<section class="servicios" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="linea"></div>
+    <div class="cards">
+        <div class="card">
+            <div class="icono">✂</div>
+            <h3>Corte Clásico</h3>
+            <p>Corte tradicional con acabado perfecto</p>
+            <div class="precio">$80</div>
+        </div>
+        <div class="card">
+            <div class="icono">🪒</div>
+            <h3>Rasurado</h3>
+            <p>Rasurado con navaja y toalla caliente</p>
+            <div class="precio">$60</div>
+        </div>
+        <div class="card">
+            <div class="icono">💈</div>
+            <h3>Corte + Barba</h3>
+            <p>Combo completo con acabado premium</p>
+            <div class="precio">$120</div>
+        </div>
+        <div class="card">
+            <div class="icono">🧴</div>
+            <h3>Tratamiento</h3>
+            <p>Hidratación y cuidado capilar profundo</p>
+            <div class="precio">$100</div>
+        </div>
+    </div>
+</section>
+
+<section class="contacto" id="contacto">
+    <h2>Reserva tu Cita</h2>
+    <div class="linea"></div>
+    <form>
+        <input type="text" placeholder="Tu nombre" />
+        <input type="tel" placeholder="Tu teléfono" />
+        <textarea placeholder="¿Qué servicio necesitas?"></textarea>
+        <button type="button">ENVIAR MENSAJE</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Barbería El Estilo — Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
